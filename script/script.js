@@ -5,7 +5,7 @@ var containerApp = angular.module("containerApp", ["ngRoute", "ngResource", "ngS
 containerApp.config(function ($routeProvider) {
 
 	$routeProvider
-	.when('/cont', {
+	.when('/', {
 		templateUrl: 'pages/first_window.html',
 		controller: 'firstController'
 	})
@@ -33,6 +33,14 @@ containerApp.config(function ($routeProvider) {
 });
 
 //DIRECTIVES
+
+containerApp.directive('back',function(){
+	return {
+		restrict:'AECM',
+		templateUrl:'templates/back.html',
+		replace:true
+	}
+})
 
 
 //SERVICES
