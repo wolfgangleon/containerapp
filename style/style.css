@@ -12,8 +12,12 @@ a {
 	right: -50%;
 	top:22.5%;
 	z-index: 999;
-
 }
+
+@media only screen and (max-width: 1400px) {
+	.app-panel {top:8%;}
+}
+
 
 #app-btn {
 	position: absolute;
