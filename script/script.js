@@ -37,7 +37,7 @@ containerApp.config(function ($routeProvider) {
 containerApp.directive('back',function(){
 	return {
 		restrict:'AECM',
-		templateUrl:'templates/back.html',
+		templateUrl:'directives/back.html',
 		replace:true
 	}
 })
