@@ -59,29 +59,33 @@ containerApp.service('qtyService',function(){
 
 containerApp.controller("tableController", ['$scope','$filter','volumeService','qtyService', function($scope, $filter, volumeService, qtyService){
 
-	$scope.totalVolume = volumeService.itemsVolume; 
+//	$scope.totalVolume = volumeService.itemsVolume; 
 
-	$scope.$watch( 'itemsVolume', function( newValue, oldValue) {
+	/*$scope.$watch( 'itemsVolume', function( newValue, oldValue) {
 		volumeService.itemsVolume =  $scope.totalVolume;
-	});
+	});*/
 
-	$scope.totalQty = qtyService.itemsQty;
+//	$scope.totalQty = qtyService.itemsQty;
 
-	$scope.$watch('itemsQty',function( newValue, oldValue ) {
+	/*$scope.$watch('itemsQty',function( newValue, oldValue ) {
 		qtyService.itemsQty = $scope.totalQty;
-	})
+	})*/
 	
 }]);
 
 containerApp.controller("firstController", ['$scope','$filter','volumeService', function($scope, $filter, volumeService){
 
-	$scope.width = volumeService.itemsVolume;
+	
 
 }]);
 
 containerApp.controller("spaceController", ['$scope','$filter','volumeService', function($scope, $filter, volumeService){
 
 	$scope.width = volumeService.itemsVolume;
+
+	/*$scope.$watch( 'itemsVolume', function( newValue, oldValue) {
+		volumeService.itemsVolume =  $scope.width;
+	});*/
 
 	console.log("width", volumeService.itemsVolume)
 
